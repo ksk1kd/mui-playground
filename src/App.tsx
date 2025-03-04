@@ -1,4 +1,10 @@
-import { Button, type ButtonProps, TextField, styled } from '@mui/material'
+import {
+  Button,
+  type ButtonProps,
+  GlobalStyles,
+  TextField,
+  styled,
+} from '@mui/material'
 import { useState } from 'react'
 
 const CustomButton = styled(Button)<ButtonProps>(({ theme }) => ({
@@ -11,7 +17,18 @@ function App() {
 
   return (
     <>
+      <GlobalStyles
+        styles={(theme) => ({
+          h2: { color: theme.palette.primary.main },
+        })}
+      />
+
       <div className="container">
+        <section>
+          <h1>Global Style</h1>
+          <h2>Heading 2</h2>
+        </section>
+
         <section>
           <h1>The styled() utility</h1>
           <CustomButton variant="contained">Hello world</CustomButton>
