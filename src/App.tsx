@@ -1,5 +1,10 @@
-import { Button, TextField } from '@mui/material'
+import { Button, type ButtonProps, TextField, styled } from '@mui/material'
 import { useState } from 'react'
+
+const CustomButton = styled(Button)<ButtonProps>(({ theme }) => ({
+  width: 300,
+  backgroundColor: theme.palette.warning.main,
+}))
 
 function App() {
   const [input, setInput] = useState('')
@@ -7,6 +12,11 @@ function App() {
   return (
     <>
       <div className="container">
+        <section>
+          <h1>The styled() utility</h1>
+          <CustomButton variant="contained">Hello world</CustomButton>
+        </section>
+
         <section>
           <h1>The sx prop</h1>
           <Button
