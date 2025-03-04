@@ -8,6 +8,16 @@ function App() {
     <>
       <div className="container">
         <section>
+          <h1>The sx prop</h1>
+          <Button
+            variant="contained"
+            sx={{ p: 2, color: 'white', bgcolor: 'secondary.main' }}
+          >
+            Hello world
+          </Button>
+        </section>
+
+        <section>
           <h1>Text Field</h1>
           <TextField
             id="outlined-basic"
